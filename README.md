@@ -1,4 +1,4 @@
-A matplotlib-based class to make [D3 Calendar Views](http://bl.ocks.org/mbostock/4063318) in python.
+Make [D3 Calendar Views](http://bl.ocks.org/mbostock/4063318) in python.
 
 ![Python Execution](https://raw.github.com/oneschirm/python-calview/master/redeye_data_nodates.png)
 
