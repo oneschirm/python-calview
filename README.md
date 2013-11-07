@@ -9,22 +9,22 @@ Data must be supplied in this format:
 
 Usage can be as simple as this: 
 
-`import pycalview`
-`calendar = pycalview.CalView(data, True, False, True)`
-`calendar.render()`
-`calendar.save('default settings')`
+`import pycalview
+calendar = pycalview.CalView(data, True, False, True)
+calendar.render()
+calendar.save('default settings')`
 
 or as complex as this:
 
-`import pycalview`
-`calendar = pycalview.CalView(data, False, False, True)`
-`calendar.min_color = 'blue'`
-`calendar.max_color = 'red'`
-`calendar.cell_color = '#F5F5F5'`
-`calendar.text_color = 'black'`
-`calendar.background_color = 'white'`
-`calendar.render()`
-`calendar.save('temperatures')`
+`import pycalview
+calendar = pycalview.CalView(data, False, False, True)
+calendar.min_color = 'blue'
+calendar.max_color = 'red'
+calendar.cell_color = '#F5F5F5'
+calendar.text_color = 'black'
+calendar.background_color = 'white'
+calendar.render()
+calendar.save('temperatures')`
 
 In the line `calendar = pycalview.CalView(data, True, False, True)`, you're passing the following arguments:
 - Data (in the format specified above)
