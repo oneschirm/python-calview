@@ -42,9 +42,15 @@ Other easily-customizable fields are:
 - background_color
 - dpi = 300
 
+Check out demo.py for a working example of this tool. The output looks like this:
+![Python Execution](https://raw.github.com/oneschirm/python-calview/master/SNSTKHLM_temp.png)
+
 ###Dependencies
 [matplotlib](http://matplotlib.org/)
+
 [numpy](http://www.numpy.org/)
 
 ### Sample Data Source
 [Redeye Chicago](http://homicides.redeyechicago.com/)
+
+[Sverige](http://academic.udayton.edu/kissock/http/Weather/gsod95-current/SNSTKHLM.txt)
