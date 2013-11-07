@@ -3,7 +3,9 @@ A matplotlib-based class to make [D3 Calendar Views](http://bl.ocks.org/mbostock
 ![Python Execution](https://raw.github.com/oneschirm/python-calview/master/redeye_data_nodates.png)
 
 Data must be supplied in this format:
-`data = [{'year':2013,'month':11,'day':05, 'value':412}]`
+<pre>data = [{'year':2013,'month':11,'day':05, 'value':412}
+{'year':2013,'month':11,'day':06, 'value':221}]
+</pre>
 
 Usage can be as simple as this: 
 
