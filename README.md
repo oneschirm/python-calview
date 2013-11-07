@@ -16,14 +16,14 @@ calendar.save('default settings')`
 
 or as complex as this:
 
-`import pycalview
-calendar = pycalview.CalView(data, False, False, True)
-calendar.min_color = 'blue'
-calendar.max_color = 'red'
-calendar.cell_color = '#F5F5F5'
-calendar.text_color = 'black'
-calendar.background_color = 'white'
-calendar.render()
+`import pycalview \n
+calendar = pycalview.CalView(data, False, False, True) \n
+calendar.min_color = 'blue' \n
+calendar.max_color = 'red' \n
+calendar.cell_color = '#F5F5F5' \n
+calendar.text_color = 'black' \n
+calendar.background_color = 'white' \n
+calendar.render() \n 
 calendar.save('temperatures')`
 
 In the line `calendar = pycalview.CalView(data, True, False, True)`, you're passing the following arguments:
