@@ -1,6 +1,6 @@
 A simple Python program to plot crime data using matplotlib and shapefile. 
 
-![D3 Inspiration](http://bl.ocks.org/mbostock/4063318)
+[D3 Inspiration](http://bl.ocks.org/mbostock/4063318)
 
 ![Python Execution](https://raw.github.com/oneschirm/python-calview/master/redeye_data_nodates.png)
 
