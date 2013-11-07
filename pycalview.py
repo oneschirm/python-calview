@@ -8,6 +8,7 @@ import calendar
 
 class CalView(object):
 
+    #customize
     min_color = 'red'
     max_color = 'green'
     text_color = 'black'
@@ -21,12 +22,51 @@ class CalView(object):
         self.should_label = import_label
         self.split_at_median = import_type
         self.absolute = import_abs
+
+    #basic methods
+    # this could be internationalized ie Jan. Feb. Maerz, April, Mai, Juni...
+    def get_month_name(self,number):
+        months = ['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.']
+        return months[number]
+    
+    def get_real_number(self,number):
+        if number == 0:
+            return 7
+        elif number == 1:
+            return 6
+        elif number == 2:
+            return 5
+        elif number == 3:
+            return 4
+        elif number == 4:
+            return 3
+        elif number == 5:
+            return 2
+        elif number == 6:
+            return 1
+        elif number == 7:
+            return 0
         
     def determine_years(self):
         years = [item['year'] for item in self.data]
         unique_years = list(set(years))
         return unique_years
-
+        
+    def max_value(self, year):
+        if self.absolute == False:
+            values = [x['value'] for x in self.data if x['year'] == year]
+        else:
+            values = [x['value'] for x in self.data]
+        return np.max(np.array(values))
+        
+    def median_value(self, year):
+        if self.absolute == False:
+            values = [x['value'] for x in self.data if x['year'] == year]
+        else:
+            values = [x['value'] for x in self.data]
+        return np.median(np.array(values))    
+        
+    #functional methods 
     def render(self):
         self.days = ['Sunday','Saturday','Friday','Thursday','Wednesday','Tuesday','Monday']
         self.index_starts = {'January':'','February':'','March':'','April':'','May':'','June':'','July':'' \
@@ -80,20 +120,6 @@ class CalView(object):
                 labelbottom='on') # labels along the bottom edge are off
             axis.text(0.47, 1.1, year,color=self.text_color, fontsize=18,transform=axis.transAxes,family='Verdana')
             self.plot_data(year)
-            
-    def max_value(self, year):
-        if self.absolute == False:
-            values = [x['value'] for x in self.data if x['year'] == year]
-        else:
-            values = [x['value'] for x in self.data]
-        return np.max(np.array(values))
-        
-    def median_value(self, year):
-        if self.absolute == False:
-            values = [x['value'] for x in self.data if x['year'] == year]
-        else:
-            values = [x['value'] for x in self.data]
-        return np.median(np.array(values))
 
     def plot_data(self, year):
         for item in self.data:
@@ -130,33 +156,11 @@ class CalView(object):
             alpha = 0.01
             color = self.min_color      
         return color, alpha   
-                                
+                   
+    #output             
     def show(self):
         show()
         
     def save(self, file_name):
         plt.savefig('%s.png' % file_name, facecolor=self.background_color,\
                     edgecolor='none', dpi=self.dpi, bbox_inches='tight')
-
-    # this could be internationalized ie Jan. Feb. Maerz, April, Mai, Juni...
-    def get_month_name(self,number):
-        months = ['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.']
-        return months[number]
-    
-    def get_real_number(self,number):
-        if number == 0:
-            return 7
-        elif number == 1:
-            return 6
-        elif number == 2:
-            return 5
-        elif number == 3:
-            return 4
-        elif number == 4:
-            return 3
-        elif number == 5:
-            return 2
-        elif number == 6:
-            return 1
-        elif number == 7:
-            return 0
