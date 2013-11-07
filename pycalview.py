@@ -11,7 +11,6 @@ class CalView(object):
     min_color = 'red'
     max_color = 'green'
     text_color = 'black'
-    text_background = 'white'
     cell_color = '#F5F5F5'
     background_color = 'white'
     dpi = 300

@@ -32,6 +32,14 @@ In the line `calendar = pycalview.CalView(data, True, False, True)`, you're pass
 - A boolean that tells the class whether to use the median (good for values) or the max(good for frequency) to determine the cells' alphas. (True == Use median)
 - A boolean that tells the class whether to calculate the alpha for each year in isolation or all together. (True == Same scale for all)
 
+Other easily-customizable fields are:
+- min_color
+- max_color
+- text_color 
+- cell_color
+- background_color
+- dpi = 300
+
 ###Dependencies
 [matplotlib](http://matplotlib.org/)
 [numpy](http://www.numpy.org/)
