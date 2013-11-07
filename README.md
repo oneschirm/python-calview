@@ -9,14 +9,14 @@ Data must be supplied in this format:
 
 Usage can be as simple as this: 
 
- ```import pycalview 
+ <pre>import pycalview 
  calendar = pycalview.CalView(data, True, False, True)
  calendar.render()
- calendar.save('default settings')```
+ calendar.save('default settings')</pre>
 
 or as complex as this:
 
- ```import pycalview
+ <pre>import pycalview
  calendar = pycalview.CalView(data, False, False, True)
  calendar.min_color = 'blue'
  calendar.max_color = 'red'
@@ -24,7 +24,7 @@ or as complex as this:
  calendar.text_color = 'black'
  calendar.background_color = 'white'
  calendar.render()
- calendar.save('temperatures')```
+ calendar.save('temperatures')</pre>
 
 In the line `calendar = pycalview.CalView(data, True, False, True)`, you're passing the following arguments:
 - Data (in the format specified above)
