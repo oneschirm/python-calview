@@ -7,6 +7,8 @@ Data must be supplied in this format:
 {'year':2013,'month':11,'day':06, 'value':221}]
 </pre>
 
+Data must not contain duplicate dates, as they will be overwritten. 
+
 Usage can be as simple as this: 
 
 <pre>import pycalview 
